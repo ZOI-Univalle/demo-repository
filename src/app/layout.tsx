@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   keywords:
     "ZOI, SOE, Univalle, Universidad Privada del Valle, Sociedad de Estudiantes Líderes",
   authors: [{ name: "Universidad Privada del Valle" }],
+  publisher: "Universidad Privada del Valle",
   robots: {
     index: true,
     follow: true,
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
     url: "https://soe.univalle.edu",
     siteName: "ZOI SOE",
     title: "ZOI - SOE Univalle",
-    description: "Universidad del Valle - Sistema de Operaciones Especiales",
+    description: "Universidad Privada del Valle - Sociedad de Estudiantes Líderes",
     images: [
       {
         url: "/og-image.jpg",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ZOI - SOE Univalle",
-    description: "Universidad del Valle - Sistema de Operaciones Especiales",
+    description: "Universidad Privada del Valle - Sociedad de Estudiantes Líderes",
     images: ["/twitter-image.jpg"],
   },
 };
