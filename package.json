@@ -6,10 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start -p 3001",
-    "prod": "next build && next start -p 3001",
-    "lint": "next lint",
-    "analyze": "ANALYZE=true next build",
-    "type-check": "tsc --noEmit"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "19.0.0-rc-02c0e824-20241028",

@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-// Configuración de fuentes locales
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -15,15 +14,40 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' }
+  ],
+  colorScheme: 'light dark'
+};
+
 export const metadata: Metadata = {
-  title: "ZOI - SOE | Univalle",
+  metadataBase: new URL("https://soe.univalle.edu"),
+  title: {
+    template: "%s | SOE Univalle",
+    default: "ZOI - SOE | Univalle",
+  },
   description:
     "Sociedad de Estudiantes Líderes (SOE) de la Universidad Privada del Valle (Univalle)",
   keywords:
     "ZOI, SOE, Univalle, Universidad Privada del Valle, Sociedad de Estudiantes Líderes",
   authors: [{ name: "Universidad Privada del Valle" }],
-  robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -35,26 +59,39 @@ export const metadata: Metadata = {
     ],
     other: [{ rel: "manifest", url: "/site.webmanifest" }],
   },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "ZOI - SOE Univalle",
-    description: "Universidad del Valle - Sistema de Operaciones Especiales",
+    type: "website",
+    locale: "es_ES",
     url: "https://soe.univalle.edu",
     siteName: "ZOI SOE",
-    locale: "es_ES",
-    type: "website",
+    title: "ZOI - SOE Univalle",
+    description: "Universidad del Valle - Sistema de Operaciones Especiales",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ZOI SOE Univalle",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ZOI - SOE Univalle",
+    description: "Universidad del Valle - Sistema de Operaciones Especiales",
+    images: ["/twitter-image.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

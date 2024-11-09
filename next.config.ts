@@ -1,12 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: 'standalone',
+const nextConfig = {
+  // Eliminar output: 'standalone'
   poweredByHeader: false,
-  compress: true,
-  env: {
-    NODE_ENV: 'production'
-  }
+  compress: true
 };
 
 export default nextConfig;
