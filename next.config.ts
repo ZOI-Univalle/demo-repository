@@ -1,10 +1,9 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  poweredByHeader: false,
-  compress: true,
-  images: {
-    unoptimized: true
+  experimental: {
+    appDir: true
   }
-};
+}
 
 export default nextConfig;
