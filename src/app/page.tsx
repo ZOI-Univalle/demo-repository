@@ -15,6 +15,7 @@ export default function Home() {
                       connect-src 'self';"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         <title>ZOI</title>
       </Head>
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">

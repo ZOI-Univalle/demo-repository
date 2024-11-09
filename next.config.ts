@@ -1,7 +1,10 @@
 const nextConfig = {
-  // Eliminar output: 'standalone'
+  output: 'standalone',
   poweredByHeader: false,
-  compress: true
+  compress: true,
+  images: {
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
