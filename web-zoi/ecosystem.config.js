@@ -4,7 +4,7 @@ module.exports = {
       name: "zoi-app",
       script: "npm",
       args: "start",
-      cwd: "C:\\TRABAJOS\\ZOI\\demo-repository\\web-zoi",
+      cwd: "C:\\CONSTRUCTOR\\demo-repository\\web-zoi",
     },
   ],
 };
