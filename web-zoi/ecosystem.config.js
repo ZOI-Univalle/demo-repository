@@ -1,10 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: "nextjs-app",
+      name: "zoi-app",
       script: "npm",
       args: "start",
-      cwd: "C:\\CONSTRUCTOR\\demo-repository\\web-zoi",
+      cwd: "C:\\TRABAJOS\\ZOI\\demo-repository\\web-zoi",
     },
   ],
 };
