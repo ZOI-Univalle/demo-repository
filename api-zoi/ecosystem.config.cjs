@@ -15,7 +15,7 @@ module.exports = {
       env_production: {
         NODE_ENV: 'production',
         PORT: 3001,
-        DB_SERVER: "192.168.10.11",
+        DB_SERVER: '192.168.10.11',
         DB_DATABASE: 'zoinew',
         DB_USER: 'api_user',
         DB_PASSWORD: 'Univalle/2024'
