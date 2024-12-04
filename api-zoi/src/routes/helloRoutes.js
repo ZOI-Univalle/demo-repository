@@ -1,9 +1,7 @@
 import { Router } from 'express';
-import { sayHello, sayHelloApi } from '../controllers/helloController.js';
+import { sayHelloApi } from '../controllers/helloController.js';
 
 const router = Router();
-
-router.get('/', sayHello);
-router.get('/api', sayHelloApi);
+router.get('/hello', sayHelloApi);
 
 export default router;
